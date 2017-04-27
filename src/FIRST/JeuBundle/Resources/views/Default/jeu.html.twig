@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>World Conquest - Jouez Maintenant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Harmattan" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset ('assets/css/bootstrap.css')}}"/>
+    <link rel="stylesheet" href="{{asset ('assets/stylesheets/screen.css')}}"/>
+  	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Muli|Open+Sans+Condensed:300" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  </head>
+
+  <body>
+  <div class="header">
+
+    <div class="logo">
+      <img src="{{asset ('assets/img/logo.png')}}" alt="logo">
+    </div>
+
+      <nav>
+        <ul>
+          <li><a href="http://89.234.182.92/jeu">Accueil</a></li>
+          <li><a href="http://89.234.182.92/jeu/jouer">Jeu</a></li>
+          <li><a href="#">A propos du jeu</a></li>
+          <li><a href="#">Classement</a></li>
+          <li><a href="#">Forum</a></li>
+          <li><a href="http://89.234.182.92/jeu/login">Log in</a></li>
+          <li><a href="http://89.234.182.92/jeu/register">Sign up</a></li>
+        </ul>
+      </nav>
+
+      <div class="salon">
+        <h2>{{  utilisateur }}</h2>
+        <h3><a href="http://89.234.182.92/jeu/nv_salon">Crée une partie</a></h3>
+          <ul>
+
+            <div class="salon_id1">
+              {% for salon in salons %}
+                <li><a href="salon/{{  salon.salonId }}">{{  salon.salonNom }}</a></li>
+              {% endfor %}
+            </div>
+
+            <div class="salon_id2">
+              {% for salon2 in salons2 %}
+                <li><a href="salon/{{  salon2.salonId }}">{{  salon2.salonNom }}</a></li>
+              {% endfor %}
+            </div>
+
+          </ul>
+      </div>
+
+  </div>
+
+  <footer>
+    <p>Copyright BY Web Agency 2017</p>
+  </footer>
+
+  </body>
+</html>

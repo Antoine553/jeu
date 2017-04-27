@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+		<title>World Conquest - Jouez Maintenant</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+	  	<link href="https://fonts.googleapis.com/css?family=Harmattan" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Muli|Open+Sans+Condensed:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	  	<link rel="stylesheet" href="{{asset ('assets/stylesheets/bon.css')}}"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    </head>
+
+    <body class='{{ bon }}'>
+
+			<script type="text/javascript">
+        $(document).ready(function () {
+            $("#commentaires").hide();
+            $("#affichagecommentaire").dblclick(function () {
+                $(this).next("#commentaires").slideToggle(600);
+            });
+        });
+    	</script>
+
+        <iframe src="../../chat/chat.php" width="600px;" height="800px"></iframe>    
+
+
+		<div class="score1">
+			<p>Score {{joueur1}}</p>
+			<div class="id">
+				{{scorejoueur1}}
+			</div>
+		</div>
+
+		<div class="score2">
+			<p>Score {{joueur2}}</p>
+			<div class="id">
+				{{scorejoueur2}}
+			</div>
+		</div>
+
+
+    	<div class="pioche_2">
+    		<div id="cartepioche1">
+    			{% if utilisateur == joueur2 %}
+	    		<a href="../passer_le_tour/{{id}}/2/{{carte_pioche_2_1}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_2_1}}">Defausse</a>
+	    		{% if carte_pioche_2_1 == false %}<a href="../piocher/{{id}}/carte_pioche_2_1">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_2_1" {% if utilisateur == joueur2 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_2_1 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    	<div id="cartepioche2">
+	    		{% if utilisateur == joueur2 %}
+	    		<a href="../passer_le_tour/{{id}}/2/{{carte_pioche_2_2}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_2_2}}">Defausse</a>
+	    		{% if carte_pioche_2_2 == false %}<a href="../piocher/{{id}}/carte_pioche_2_2">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_2_2" {% if utilisateur == joueur2 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_2_2 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    	<div id="cartepioche3">
+	    		{% if utilisateur == joueur2 %}
+	    		<a href="../passer_le_tour/{{id}}/2/{{carte_pioche_2_3}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_2_3}}">Defausse</a>
+	    		{% if carte_pioche_2_3 == false %}<a href="../piocher/{{id}}/carte_pioche_2_3">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_2_3" {% if utilisateur == joueur2 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_2_3 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    	<div id="cartepioche4">
+	    		{% if utilisateur == joueur2 %}
+	    		<a href="../passer_le_tour/{{id}}/2/{{carte_pioche_2_4}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_2_4}}">Defausse</a>
+	    		{% if carte_pioche_2_4 == false %}<a href="../piocher/{{id}}/carte_pioche_2_4">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_2_4" {% if utilisateur == joueur2 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_2_4 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    	<div id="cartepioche5">
+	    		{% if utilisateur == joueur2 %}
+	    		<a href="../passer_le_tour/{{id}}/2/{{carte_pioche_2_5}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_2_5}}">Defausse</a>
+	    		{% if carte_pioche_2_5 == false %}<a href="../piocher/{{id}}/carte_pioche_2_5">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_2_5" {% if utilisateur == joueur2 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_2_5 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    	<div id="cartepioche6">
+	    		{% if utilisateur == joueur2 %}
+	    		<a href="../passer_le_tour/{{id}}/2/{{carte_pioche_2_6}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_2_6}}">Defausse</a>
+	    		{% if carte_pioche_2_6 == false %}<a href="../piocher/{{id}}/carte_pioche_2_6">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_2_6" {% if utilisateur == joueur2 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_2_6 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    	<div id="cartepioche7">
+	    		{% if utilisateur == joueur2 %}
+	    		<a href="../passer_le_tour/{{id}}/2/{{carte_pioche_2_7}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_2_7}}">Defausse</a>
+	    		{% if carte_pioche_2_7 == false %}<a href="../piocher/{{id}}/carte_pioche_2_7">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_2_7" {% if utilisateur == joueur2 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_2_7 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    	<div id="cartepioche8">
+	    		{% if utilisateur == joueur2 %}
+	    		<a href="../passer_le_tour/{{id}}/2/{{carte_pioche_2_8}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_2_8}}">Defausse</a>
+	    		{% if carte_pioche_2_8 == false %}<a href="../piocher/{{id}}/carte_pioche_2_8">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_2_8" {% if utilisateur == joueur2 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_2_8 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+    	</div>
+
+
+
+    	<div class="cote_joueur_2">
+    		<div class="colonne1">
+	    		<div class="carte cartejoueur2" id="carte_cote_2_12" {% if carte_cote_2_12 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_12 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_11" {% if carte_cote_2_11 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_11 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_10" {% if carte_cote_2_10 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_10 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_9" {% if carte_cote_2_9 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_9 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_8" {% if carte_cote_2_8 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_8 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_7" {% if carte_cote_2_7 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_7 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_6" {% if carte_cote_2_6 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_6 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_5" {% if carte_cote_2_5 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_5 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_4" {% if carte_cote_2_4 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_4 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_3" {% if carte_cote_2_3 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_3 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_2" {% if carte_cote_2_2 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_2 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_1" {% if carte_cote_2_1 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_1 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="colonne2">
+	    		<div class="carte cartejoueur2" id="carte_cote_2_24" {% if carte_cote_2_24 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_24 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_23" {% if carte_cote_2_23 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_23 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_22" {% if carte_cote_2_22 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_22 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_21" {% if carte_cote_2_21 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_21 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_20" {% if carte_cote_2_20 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_20 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_19" {% if carte_cote_2_19 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_19 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_18" {% if carte_cote_2_18 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_18 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_17" {% if carte_cote_2_17 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_17 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_16" {% if carte_cote_2_16 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_16 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_15" {% if carte_cote_2_15 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_15 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_14" {% if carte_cote_2_14 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_14 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_13" {% if carte_cote_2_13 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_13 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="colonne3">
+	    		<div class="carte cartejoueur2" id="carte_cote_2_36" {% if carte_cote_2_36 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_36 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_35" {% if carte_cote_2_35 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_35 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_34" {% if carte_cote_2_34 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_34 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_33" {% if carte_cote_2_33 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_33 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_32" {% if carte_cote_2_32 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_32 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_31" {% if carte_cote_2_31 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_31 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_30" {% if carte_cote_2_30 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_30 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_29" {% if carte_cote_2_29 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_29 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_28" {% if carte_cote_2_28 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_28 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_27" {% if carte_cote_2_27 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_27 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_26" {% if carte_cote_2_26 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_26 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_25" {% if carte_cote_2_25 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_25 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="colonne4">
+	    		<div class="carte cartejoueur2" id="carte_cote_2_48" {% if carte_cote_2_48 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_48 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_47" {% if carte_cote_2_47 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_47 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_46" {% if carte_cote_2_46 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_46 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_45" {% if carte_cote_2_45 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_45 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_44" {% if carte_cote_2_44 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_44 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_43" {% if carte_cote_2_43 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_43 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_42" {% if carte_cote_2_42 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_42 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_41" {% if carte_cote_2_41 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_41 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_40" {% if carte_cote_2_40 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_40 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_39" {% if carte_cote_2_39 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_39 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_38" {% if carte_cote_2_38 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_38 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_37" {% if carte_cote_2_37 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_37 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="colonne5">
+	    		<div class="carte cartejoueur2" id="carte_cote_2_60" {% if carte_cote_2_60 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_60 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_59" {% if carte_cote_2_59 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_59 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_58" {% if carte_cote_2_58 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_58 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_57" {% if carte_cote_2_57 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_57 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_56" {% if carte_cote_2_56 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_56 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_55" {% if carte_cote_2_55 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_55 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_54" {% if carte_cote_2_54 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_54 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_53" {% if carte_cote_2_53 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_53 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_52" {% if carte_cote_2_52 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_52 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_51" {% if carte_cote_2_51 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_51 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_50" {% if carte_cote_2_50 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_50 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur2" id="carte_cote_2_49" {% if carte_cote_2_49 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_2_49 }}.png');"{% endif %}></div>
+	    	</div>
+    	</div>
+
+    	<div class="defausse">
+    		<div class="def_colonne1">
+    			<a href="../piocher/def/{{id}}/colonne1">Piocher</a>
+	    		<div class="carte defplace" id="carte_def_1" {% if carte_def_1 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_1 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_2" {% if carte_def_2 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_2 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_3" {% if carte_def_3 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_3 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_4" {% if carte_def_4 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_4 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_5" {% if carte_def_5 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_5 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_6" {% if carte_def_6 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_6 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_7" {% if carte_def_7 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_7 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_8" {% if carte_def_8 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_8 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_9" {% if carte_def_9 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_9 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_10" {% if carte_def_10 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_10 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_11" {% if carte_def_11 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_11 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_12" {% if carte_def_12 == false %}style="background-image:url('{{ asset('assets/img/base_scandinavie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_12 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="def_colonne2">
+	    		<a href="../piocher/def/{{id}}/colonne2">Piocher</a>
+	    		<div class="carte defplace" id="carte_def_13" {% if carte_def_13 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_13 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_14" {% if carte_def_14 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_14 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_15" {% if carte_def_15 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_15 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_16" {% if carte_def_16 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_16 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_17" {% if carte_def_17 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_17 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_18" {% if carte_def_18 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_18 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_19" {% if carte_def_19 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_19 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_20" {% if carte_def_20 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_20 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_21" {% if carte_def_21 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_21 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_22" {% if carte_def_22 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_22 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_23" {% if carte_def_23 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_23 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_24" {% if carte_def_24 == false %}style="background-image:url('{{ asset('assets/img/base_amerique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_24 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="def_colonne3">
+	    		<a href="../piocher/def/{{id}}/colonne3">Piocher</a>
+	    		<div class="carte defplace" id="carte_def_25" {% if carte_def_25 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_25 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_26" {% if carte_def_26 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_26 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_27" {% if carte_def_27 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_27 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_28" {% if carte_def_28 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_28 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_29" {% if carte_def_29 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_29 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_30" {% if carte_def_30 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_30 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_31" {% if carte_def_31 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_31 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_32" {% if carte_def_32 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_32 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_33" {% if carte_def_33 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_33 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_34" {% if carte_def_34 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_34 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_35" {% if carte_def_35 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_35 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_36" {% if carte_def_36 == false %}style="background-image:url('{{ asset('assets/img/base_afrique.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_36 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="def_colonne4">
+	    		<a href="../piocher/def/{{id}}/colonne4">Piocher</a>
+	    		<div class="carte defplace" id="carte_def_37" {% if carte_def_37 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_37 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_38" {% if carte_def_38 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_38 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_39" {% if carte_def_39 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_39 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_40" {% if carte_def_40 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_40 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_41" {% if carte_def_41 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_41 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_42" {% if carte_def_42 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_42 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_43" {% if carte_def_43 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_43 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_44" {% if carte_def_44 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_44 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_45" {% if carte_def_45 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_45 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_46" {% if carte_def_46 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_46 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_47" {% if carte_def_47 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_47 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_48" {% if carte_def_48 == false %}style="background-image:url('{{ asset('assets/img/base_europe.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_48 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="def_colonne5">
+	    		<a href="../piocher/def/{{id}}/colonne5">Piocher</a>
+	    		<div class="carte defplace" id="carte_def_49" {% if carte_def_49 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_49 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_50" {% if carte_def_50 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_50 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_51" {% if carte_def_51 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_51 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_52" {% if carte_def_52 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_52 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_53" {% if carte_def_53 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_53 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_54" {% if carte_def_54 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_54 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_55" {% if carte_def_55 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_55 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_56" {% if carte_def_56 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_56 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_57" {% if carte_def_57 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_57 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_58" {% if carte_def_58 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_58 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_59" {% if carte_def_59 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_59 }}.png');"{% endif %}></div>
+	    		<div class="carte defplace" id="carte_def_60" {% if carte_def_60 == false %}style="background-image:url('{{ asset('assets/img/base_asie.png')}}"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_def_60 }}.png');"{% endif %}></div>
+	    	</div>
+	    </div>
+
+
+    	<div class="cote_joueur_1">
+    		<div class="colonne1">
+	    		<div class="carte cartejoueur" id="carte_cote_1_1" {% if carte_cote_1_1 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_1 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_2" {% if carte_cote_1_2 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_2 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_3" {% if carte_cote_1_3 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_3 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_4" {% if carte_cote_1_4 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_4 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_5" {% if carte_cote_1_5 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_5 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_6" {% if carte_cote_1_6 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_6 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_7" {% if carte_cote_1_7 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_7 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_8" {% if carte_cote_1_8 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_8 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_9" {% if carte_cote_1_9 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_9 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_10" {% if carte_cote_1_10 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_10 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_11" {% if carte_cote_1_11 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_11 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_12" {% if carte_cote_1_12 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_12 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="colonne2">
+	    		<div class="carte cartejoueur" id="carte_cote_1_13" {% if carte_cote_1_13 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_13 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_14" {% if carte_cote_1_14 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_14 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_15" {% if carte_cote_1_15 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_15 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_16" {% if carte_cote_1_16 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_16 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_17" {% if carte_cote_1_17 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_17 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_18" {% if carte_cote_1_18 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_18 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_19" {% if carte_cote_1_19 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_19 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_20" {% if carte_cote_1_20 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_20 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_21" {% if carte_cote_1_21 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_21 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_22" {% if carte_cote_1_22 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_22 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_23" {% if carte_cote_1_23 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_23 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_24" {% if carte_cote_1_24 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_24 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="colonne3">
+	    		<div class="carte cartejoueur" id="carte_cote_1_25" {% if carte_cote_1_25 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_25 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_26" {% if carte_cote_1_26 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_26 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_27" {% if carte_cote_1_27 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_27 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_28" {% if carte_cote_1_28 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_28 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_29" {% if carte_cote_1_29 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_29 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_30" {% if carte_cote_1_30 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_30 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_31" {% if carte_cote_1_31 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_31 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_32" {% if carte_cote_1_32 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_32 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_33" {% if carte_cote_1_33 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_33 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_34" {% if carte_cote_1_34 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_34 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_35" {% if carte_cote_1_35 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_35 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_36" {% if carte_cote_1_36 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_36 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="colonne4">
+	    		<div class="carte cartejoueur" id="carte_cote_1_37" {% if carte_cote_1_37 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_37 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_38" {% if carte_cote_1_38 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_38 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_39" {% if carte_cote_1_39 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_39 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_40" {% if carte_cote_1_40 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_40 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_41" {% if carte_cote_1_41 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_41 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_42" {% if carte_cote_1_42 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_42 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_43" {% if carte_cote_1_43 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_43 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_44" {% if carte_cote_1_44 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_44 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_45" {% if carte_cote_1_45 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_45 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_46" {% if carte_cote_1_46 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_46 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_47" {% if carte_cote_1_47 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_47 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_48" {% if carte_cote_1_48 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_48 }}.png');"{% endif %}></div>
+	    	</div>
+	    	<div class="colonne5">
+	    		<div class="carte cartejoueur" id="carte_cote_1_49" {% if carte_cote_1_49 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_49 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_50" {% if carte_cote_1_50 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_50 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_51" {% if carte_cote_1_51 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_51 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_52" {% if carte_cote_1_52 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_52 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_53" {% if carte_cote_1_53 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_53 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_54" {% if carte_cote_1_54 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_54 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_55" {% if carte_cote_1_55 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_55 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_56" {% if carte_cote_1_56 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_56 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_57" {% if carte_cote_1_57 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_57 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_58" {% if carte_cote_1_58 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_58 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_59" {% if carte_cote_1_59 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_59 }}.png');"{% endif %}></div>
+	    		<div class="carte cartejoueur" id="carte_cote_1_60" {% if carte_cote_1_60 == false %}style="display:none;"{% else %}style="background-image:url('{{ asset('assets/img/')}}{{ carte_cote_1_60 }}.png');"{% endif %}></div>
+	    	</div>
+    	</div>
+
+
+    	<div class="pioche_1">
+    		<div id="cartepioche9">
+    			{% if utilisateur == joueur1 %}
+	    		<a href="../passer_le_tour/{{id}}/1/{{carte_pioche_1_1}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_1_1}}">Defausse</a>
+	    		{% if carte_pioche_1_1 == false %}<a href="../piocher/{{id}}/carte_pioche_1_1">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_1_1" {% if utilisateur == joueur1 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_1_1 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    		<div id="cartepioche10">
+	    		{% if utilisateur == joueur1 %}
+	    		<a href="../passer_le_tour/{{id}}/1/{{carte_pioche_1_2}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_1_2}}">Defausse</a>
+	    		{% if carte_pioche_1_2 == false %}<a href="../piocher/{{id}}/carte_pioche_1_2">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_1_2" {% if utilisateur == joueur1 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_1_2 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    		<div id="cartepioche11">
+	    		{% if utilisateur == joueur1 %}
+	    		<a href="../passer_le_tour/{{id}}/1/{{carte_pioche_1_3}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_1_3}}">Defausse</a>
+	    		{% if carte_pioche_1_3 == false %}<a href="../piocher/{{id}}/carte_pioche_1_3">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_1_3" {% if utilisateur == joueur1 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_1_3 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    		<div id="cartepioche12">
+	    		{% if utilisateur == joueur1 %}
+	    		<a href="../passer_le_tour/{{id}}/1/{{carte_pioche_1_4}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_1_4}}">Defausse</a>
+	    		{% if carte_pioche_1_4 == false %}<a href="../piocher/{{id}}/carte_pioche_1_4">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_1_4" {% if utilisateur == joueur1 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_1_4 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    		<div id="cartepioche13">
+	    		{% if utilisateur == joueur1 %}
+	    		<a href="../passer_le_tour/{{id}}/1/{{carte_pioche_1_5}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_1_5}}">Defausse</a>
+	    		{% if carte_pioche_1_5 == false %}<a href="../piocher/{{id}}/carte_pioche_1_5">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_1_5" {% if utilisateur == joueur1 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_1_5 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    		<div id="cartepioche14">
+	    		{% if utilisateur == joueur1 %}
+	    		<a href="../passer_le_tour/{{id}}/1/{{carte_pioche_1_6}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_1_6}}">Defausse</a>
+	    		{% if carte_pioche_1_6 == false %}<a href="../piocher/{{id}}/carte_pioche_1_6">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_1_6" {% if utilisateur == joueur1 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_1_6 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    		<div id="cartepioche15">
+	    		{% if utilisateur == joueur1 %}
+	    		<a href="../passer_le_tour/{{id}}/1/{{carte_pioche_1_7}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_1_7}}">Defausse</a>
+	    		{% if carte_pioche_1_7 == false %}<a href="../piocher/{{id}}/carte_pioche_1_7">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_1_7" {% if utilisateur == joueur1 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_1_7 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+	    	<div id="cartepioche16">
+	    		{% if utilisateur == joueur1 %}
+	    		<a href="../passer_le_tour/{{id}}/1/{{carte_pioche_1_8}}">Jouer</a>
+	    		<a href="../passer_le_tour/{{id}}/defausse/{{carte_pioche_1_8}}">Defausse</a>
+	    		{% if carte_pioche_1_8 == false %}<a href="../piocher/{{id}}/carte_pioche_1_8">Piocher</a>{% endif %}{% endif %}
+	    		<div class="carte" id="carte_pioche_1_8" {% if utilisateur == joueur1 %} style="background-image:url('{{ asset('assets/img/')}}{{ carte_pioche_1_8 }}.png');"{% else %}style="background-image:url('{{ asset('assets/img/base_jeu.png')}}"{% endif %}></div>
+	    	</div>
+    	</div>
+    </body>
+</html>

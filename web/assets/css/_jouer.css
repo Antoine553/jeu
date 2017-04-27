@@ -1,0 +1,28 @@
+.salon {
+  text-align: center;
+  margin: auto;
+  width: 800px; }
+  .salon h2 {
+    color: white;
+    text-align: center;
+    font-size: 3vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh; }
+
+.salon_id1 {
+  font-size: 2vh;
+  width: 50%;
+  height: 400px;
+  float: left;
+  background: lightblue; }
+  .salon_id1 li {
+    text-align: center; }
+
+.salon_id2 {
+  font-size: 2vh;
+  width: 50%;
+  height: 400px;
+  float: left;
+  background: lightgreen; }
+  .salon_id2 li {
+    text-align: center; }

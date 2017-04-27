@@ -1,0 +1,219 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/_jouer.sass */
+.salon {
+  text-align: center;
+  margin: auto;
+  width: 800px;
+}
+/* line 5, ../sass/_jouer.sass */
+.salon h2 {
+  color: white;
+  text-align: center;
+  font-size: 3vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+/* line 12, ../sass/_jouer.sass */
+.salon_id1 {
+  font-size: 2vh;
+  width: 50%;
+  height: 400px;
+  float: left;
+  background: lightblue;
+}
+
+/* line 19, ../sass/_jouer.sass */
+.salon_id2 {
+  font-size: 2vh;
+  width: 50%;
+  height: 400px;
+  float: left;
+  background: lightgreen;
+}
+
+/* line 1, ../sass/style.sass */
+body {
+  background-image: url(../img/bg_big.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #100C0B;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, ../sass/style.sass */
+.header {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  height: 815px;
+  background-color: #111111;
+}
+
+/* line 18, ../sass/style.sass */
+nav ul {
+  text-align: center;
+  background-color: #c18d36;
+}
+
+/* line 24, ../sass/style.sass */
+li {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 2vh;
+}
+/* line 28, ../sass/style.sass */
+li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
+}
+/* line 32, ../sass/style.sass */
+li a:hover {
+  color: black;
+  transition: 0.4s;
+}
+
+/* line 36, ../sass/style.sass */
+.logo img {
+  padding-top: 10px;
+  width: 130px;
+}
+
+/* line 43, ../sass/style.sass */
+.bg {
+  background-image: url(../img/bg_big.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+/* line 49, ../sass/style.sass */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 56, ../sass/style.sass */
+.video-container iframe object embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 63, ../sass/style.sass */
+.bouton {
+  width: 200px;
+  margin-top: 2vh;
+  text-align: center;
+  -moz-box-shadow: 0px 4px 17px -7px #080701;
+  -webkit-box-shadow: 0px 4px 17px -7px #080701;
+  box-shadow: 0px 4px 17px -7px #080701;
+  background-color: #c18d36;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  color: black;
+  font-family: Trebuchet MS;
+  font-size: 2vh;
+  font-weight: bold;
+  padding: 28px 24px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+/* line 82, ../sass/style.sass */
+.bouton:hover {
+  color: white;
+  background-color: #d55b16;
+  text-shadow: 0px 3px 15px white;
+  font-size: 120%;
+  transition: 0.5s;
+}
+
+/* line 89, ../sass/style.sass */
+footer {
+  text-align: center;
+  height: 15vh;
+  background-color: #100C0B;
+}
+/* line 93, ../sass/style.sass */
+footer p {
+  color: white;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 100px;
+}

@@ -1,0 +1,129 @@
+/* line 1, ../sass/style.sass */
+body {
+  background-image: url(../img/bg_big.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #100C0B;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, ../sass/style.sass */
+.header {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  height: 815px;
+  background-color: #111111;
+  filter: drop-shadow(0px 0px 3px black);
+}
+
+/* line 20, ../sass/style.sass */
+nav ul {
+  text-align: center;
+  background-color: #c18d36;
+}
+
+/* line 26, ../sass/style.sass */
+li {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 2vh;
+}
+/* line 30, ../sass/style.sass */
+li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
+}
+/* line 34, ../sass/style.sass */
+li a:hover {
+  color: black;
+  transition: 0.4s;
+}
+
+/* line 39, ../sass/style.sass */
+.logo {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-attachment: inherit;
+  background-repeat: no-repeat;
+}
+/* line 44, ../sass/style.sass */
+.logo img {
+  padding-top: 10px;
+  width: 130px;
+}
+
+/* line 51, ../sass/style.sass */
+.bg {
+  background-image: url(../img/bg_big.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+/* line 57, ../sass/style.sass */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 64, ../sass/style.sass */
+.video-container iframe object embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 71, ../sass/style.sass */
+.bouton {
+  width: 10vw;
+  margin-top: 2vh;
+  text-align: center;
+  -moz-box-shadow: 0px 4px 17px -7px #080701;
+  -webkit-box-shadow: 0px 4px 17px -7px #080701;
+  box-shadow: 0px 4px 17px -7px #080701;
+  background-color: #c18d36;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  color: black;
+  font-family: Trebuchet MS;
+  font-size: 1vw;
+  font-weight: bold;
+  padding: 28px 24px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+/* line 90, ../sass/style.sass */
+.bouton:hover {
+  width: 11vw;
+  color: white;
+  background-color: #d55b16;
+  text-shadow: 0px 3px 15px white;
+  font-size: 120%;
+  transition: 0.5s;
+}
+
+/* line 98, ../sass/style.sass */
+footer {
+  filter: drop-shadow(0px 0px 3px black);
+  text-align: center;
+  height: 18vh;
+  background-color: #100C0B;
+  bottom: 0px;
+}
+/* line 104, ../sass/style.sass */
+footer p {
+  color: white;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 100px;
+}
